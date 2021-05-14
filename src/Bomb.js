@@ -9,15 +9,16 @@ export default class Bomb extends Component {
       secondsLeft: props.initialCount
     }
   }
-
+  
   render(){
-    if(this.state.secondsLeft == 0){
+    const SECONDS_LEFT = this.state.secondsLeft
+    if(this.state.secondsLeft === 0){
       return (
-        <div>{this.state.secondsLeft} seconds left before I go boom!</div>
+        <div>Boom!</div>
         )
     }else{
       return (
-        <div>Boom!</div>
+        <div>{SECONDS_LEFT} seconds left before I go boom!</div>
       )
     }
 
